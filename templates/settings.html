@@ -1,0 +1,33 @@
+{% extends 'layouts/header_and_tags.html' %}
+{% load static %}
+
+{% block content %}
+
+<h3>Profile Settings</h3>
+<br>
+<form action="#">
+    <label>NickName</label>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+        </div>
+        <input type="text" class="form-control" id="inlineFormInputGroup" value="{{ user.name }}">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Login/Email</label>
+        <input type="text" class="form-control" value="{{ user.login }}">
+    </div>
+    <br>
+    <div class="form-file">
+        <label>Change avatar</label><br>
+        <input type="file" class="form-file-input" id="customFile"><br><br>
+        <img src="{% static 'img/skat.png' %}" class="img-fluid SettingsProfileImg" alt="Profile photo"><br><br>
+    </div>
+    <br>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-outline-dark">SAVE</button>
+    </div>
+</form>
+
+{% endblock %}

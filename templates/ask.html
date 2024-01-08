@@ -1,0 +1,29 @@
+{% extends 'layouts/header_and_tags.html' %}
+{% load static %}
+
+{% block content %}
+
+<h3>New Question</h3>
+<br>
+<form action="#">
+    <div class="form-group">
+        <label for="inputTitle">Title</label>
+        <input type="text" class="form-control" id="inputTitle" aria-describedby="emailHelp" placeholder="Question title">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="inputText">Text</label>
+        <textarea class="form-control" id="inputText" placeholder="Question with details"></textarea>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="inputTags">Tags</label>
+        <input type="text" class="form-control" id="inputTags" aria-describedby="emailHelp" placeholder="Question tags">
+    </div>
+    <br>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-outline-dark">ASK!</button>
+    </div>
+</form>
+
+{% endblock %}

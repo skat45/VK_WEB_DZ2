@@ -1,0 +1,38 @@
+{% extends 'layouts/header_and_tags.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="d-flex">
+    <h2>New Questions</h2>
+    <a href="#" class="ms-4 mt-2 text-danger">Hot Questions</a>
+</div><br>
+
+{% for i in items %}
+
+<div class="row"> <!-- Карточка вопроса -->
+    <div class="col-md-11 border">
+        <div class="row p-4">
+            <div class="col-md-2"> <!-- Колонка для лайков и фотки -->
+                <img src="{% static 'img/skat.png' %}" alt="Author's photo" class="img-fluid ProfileImg ms-2">
+                <br><br>
+                <input type="number" name="likes" id="likes_counter" value={{ i }} style="max-width: 50%">
+            </div>
+
+            <div class="col-md-10"> <!-- Колонка для заголовка, описания, тегов и количества ответов -->
+                <a href="/question_page/{{ i }}"><h3>WhT? Lorem Ipsum?</h3></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="row"> <!-- Строка с количеством ответов и тегами -->
+                    <div class="col-md-4">answer(s): 5</div>
+                    <div class="col-md-8">Tag(s): <a href="#" class="m-4">VkCoffee</a><a href="#">Java</a></div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<br>
+
+{% endfor %}
+
+{% endblock %}

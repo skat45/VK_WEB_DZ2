@@ -1,0 +1,42 @@
+{% extends 'layouts/header_and_tags.html' %}
+{% load static %}
+
+{% block content %}
+
+<h3>Sign Up</h3>
+<br>
+<form action="#">
+    <label>NickName</label>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+        </div>
+        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="skat45">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Login/Email</label>
+        <input type="text" class="form-control" placeholder="studik@student.bmstu.ru">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="************">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Repeat password</label>
+        <input type="password" class="form-control" placeholder="************">
+    </div>
+    <br>
+    <div class="form-file">
+        <label>Upload Avatar</label><br>
+        <input type="file" class="form-file-input" id="customFile">
+    </div>
+    <br>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-outline-dark">LET'S GO!</button>
+    </div>
+</form>
+
+{% endblock %}
